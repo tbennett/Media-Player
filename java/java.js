@@ -1,3 +1,5 @@
+import { cueTimer } from "./modules/cuepoints.js";
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -51,31 +53,23 @@ function init() {
 } // end init function
 
 document.addEventListener("DOMContentLoaded", (e) => {
-
     var myCues = [
-        {seconds: 2, callback: func1},
-        {seconds: 5, callback: func2},
-        {seconds: 10, callback: func3},
+        { seconds: 2, callback: func1 },
+        { seconds: 5, callback: func2 },
+        { seconds: 10, callback: func3 },
     ];
 
     cueTimer.setup("leverage", myCues);
 
     const vid = document.querySelector("#leverage");
     const selectList = document.querySelector("#pick");
-
-    selectList.addEventListener("change", (e) => {
-        selectVideo(e, pick);
-    });
 });
 
-
-
-function func1(){
+function func1() {
     console.log("backgroundChange");
     document.body.style.backgroundColor = "green";
 }
 
-function func2({
-    
-})
+function func2() {}
 
+function func3() {}
